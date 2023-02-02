@@ -922,9 +922,12 @@ footer .copy-section {
 }
 
 .carrousel-area {
+  height: 100vh;
   padding: 100px 0;
   overflow: hidden;
   background-color: black;
+  display: flex;
+  align-items: center;
 }
 
 .horizontal__content {
