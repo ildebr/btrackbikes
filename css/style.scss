@@ -1,0 +1,1224 @@
+$nav-h: 55px;
+$rueda-h: 35px;
+
+//$main-color: #ff0021;
+$main-color: #4e7e64;
+
+*,html{
+	margin:0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+*, *::before, *::after{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	position: relative;
+	font-family: "Roboto", sans-serif;
+	
+}
+
+html{
+	color: rgb(37, 40, 41);
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+.fit-w{
+	width: 100%;
+  }
+.fit-h{
+	height: 100vh;
+}
+
+.main-title{
+	
+	font-family: 'Work Sans', sans-serif;
+}
+  
+.max-w{
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.max-w-xl{
+	max-width: 1600px;
+}
+
+.site-container{
+	max-width: 1100px;
+}
+
+.hide{
+	display: none;
+}
+
+
+
+.landing-bike{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	h1{
+		color: #f0eded;
+		max-width: 800px;
+		font-family: 'Work Sans', sans-serif;
+		text-transform: uppercase;
+		font-weight: 900;
+		// letter-spacing: 0px;
+		line-height: 0.9;
+		font-size: 3rem;
+		text-align: center;
+		padding: 3rem;
+	}
+}
+.bike-bg{
+	background-image: url(../img/bike-bg.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	
+	background-size: cover;
+	position: absolute;
+	filter: contrast(1.4) brightness(0.5);
+	
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+
+	
+}
+
+.bike-presentation-section{
+	// background-color: #192831;
+	display: grid;
+	grid-template-columns: repeat(12,1fr);
+	position: relative;
+	color: white;
+	min-height: 600px;
+
+	.bike-side-container{
+		grid-row: 1;
+		position: relative;
+		height: 100%;
+		width: 100%;
+		grid-column: 1/9;
+		picture{
+			width: 100%;
+			height: 100%;
+		}
+		img{
+			width: auto;
+			height: auto;
+			min-width: 250px;
+			min-height: 150px;
+		}
+
+		img, picture{
+			position: absolute;
+			bottom: 0;
+			
+
+			max-height: 100%;
+			max-width: 100%;
+			// min-width: 900px;
+		}
+	}
+
+	.bike-pattern-bg{
+		background-color: #192831;
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+
+		.bg-pattern{
+			background-image: url(../img/pattern.webp) ;
+			height: 100%;
+			filter: invert(1) opacity(0.2);
+			background-repeat: repeat;
+		}
+
+	}
+
+	.main-text{
+		grid-column: 9/12;
+		grid-row: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: right;
+		
+
+		h2{
+			font-size: 6rem;
+			font-family: 'Bebas Neue', sans-serif;
+			line-height: .9;
+			
+			width: 100%;
+		}
+
+		p{
+			font-family: 'Bebas Neue', sans-serif;
+			
+			width: 100%;
+		}
+	}
+
+	.extra-text{
+		grid-column: 7/9;
+		grid-row: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		text-align: right;
+		line-height: 1.5;
+		font-weight: 300;
+
+		.first-paragraph{
+			margin-bottom: 1rem;
+			text-align: right;
+		}
+	}
+
+	.plus{
+		position: absolute;
+		display: block;
+		color: #bbb;
+		font-weight: 500;
+		font-size: 30px;
+		
+	}
+	.plus.plus1{
+		top: 15vh;
+		left: 3vw;
+		color: red;
+		z-index: 1;
+	}
+	.plus.plus2{
+		top: 55vh;
+		left: 50vw;
+		z-index: 1;
+	}
+	.plus.plus3{
+		top: 0vh;
+		right: 25vw;
+		z-index: 1;
+	}
+}
+
+
+@media (max-width:900px){
+	.bike-presentation-section{
+		grid-template-columns: 1rem 1fr 1fr 1fr 1fr 1rem;
+		grid-template-rows: min(400px,60vh) 1fr;
+		padding: 2rem 0;
+
+		.main-text, .extra-text{
+			grid-row: 1/2;
+			align-items: initial;
+			max-height: fit-content;
+		}
+		.main-text{
+			grid-column: 2/5;
+			justify-content: initial;
+			text-align: left;
+			margin-left: 10vw;
+			br{
+				display: none;
+			}
+		}
+		.extra-text{
+			grid-column: 3/6;
+			align-items: initial;
+			justify-content: flex-end;
+			margin-right: 10vw;
+		}
+
+		&.fit-h{
+			height: auto;
+			min-height: 100vh;
+		}
+		.cta-button-main{
+			margin-left: 0;
+			width: fit-content;
+		}
+
+		.bike-side-container{
+			grid-column: 2/6;
+			grid-row: 2/3;
+		}
+
+		.bike-side-container{
+			picture{
+				display: flex;
+			justify-content: center;
+			align-items: center;
+			}
+			img, picture{
+				position: relative;
+			}
+		}
+	}
+		
+}
+
+@media (max-width:600px){
+	.bike-presentation-section{
+		grid-template-rows: 300px minmax(20vh,200px) 1fr;
+
+		.extra-text{
+			grid-row: 2/3;
+		}
+		.bike-side-container{
+			grid-row: 3/4;
+		}
+	}
+}
+
+.cta-button-main{
+	background-color: white;
+	padding: .3rem 1.7rem;
+	color: #0f1f29;
+	font-weight: 800;
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-family: "bebas neue", sans-serif;
+	letter-spacing: 2px;
+	font-style: italic;
+	margin-left: auto;
+
+	&::after{
+		content: "";
+		width: 100%;
+		height: 100%;
+		border: 4px solid white;
+		position: absolute;
+		top: 8px;
+		left: 8px;
+	}
+}
+
+.ani{
+	animation: slide 1s ease-out;
+}
+.rueda-logo{
+	visibility: hidden;
+}
+
+@keyframes slide{
+	0%{
+		left: -30%;
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		left: 0;
+	}
+
+
+}
+
+nav{
+
+	&.main-nav{
+		position: fixed;
+		top: 0;
+		z-index: 1;
+		div.nav-inside{
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			img{
+				max-height: $rueda-h;
+				margin-left: 5px;
+				transform-origin: center;
+				transition: 0.5s ease-out;
+			}
+			div.relleno{
+				height: $rueda-h;
+				width: $rueda-h;
+				padding-right: 5px;
+			}
+
+			h1{
+				color: white;
+			}
+		}
+	}
+}
+
+.half{
+	/*height: 50%;
+*/
+
+	/*en horizontal width 50%*/
+}
+
+
+
+main.landing{
+	// height: calc(100vh - 55px);
+	background-color: white;
+
+	div.landing-inside{
+		height: 100%;
+
+		display: flex;
+		flex-direction: column;
+
+		div.landing-pic{
+			flex-grow: 2;
+			position: relative;
+			/*
+			transition: 1s ease;
+			left: -200px;*/
+
+
+			img{
+				max-width: 100%;
+				max-height: 400px;
+				position: relative;
+				top: 50%;
+				transform: translate(0,-50%);
+			}
+
+			
+
+			
+		}
+
+
+		div.cta{
+			flex-grow: 1;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			h2.cta-text{
+				color: black;
+			}
+
+			button.button-cta{
+				padding: .7rem;
+				border: none;
+				background-color: $main-color;
+
+				h1.button-text{
+					font-family: sans-serif;
+					color: white;
+					font-size: 1.35rem;
+					padding: 0 1.4rem;
+				}
+			}
+		}
+	}
+
+	.half#landing-2{
+		padding: 1rem;
+		div.form-container{
+			box-shadow: -3px 3px 9px #bbb;
+			    border-radius: 10px;
+		}
+			div.form-title{
+				// border-top-left-radius: 10px;
+    			// border-top-right-radius: 10px;
+				width: 100%;
+				background-color: #1c4234;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-transform: uppercase;
+				h2{
+					padding: 0.75rem 0;
+					color: white;
+				}
+
+			}
+			form{
+
+				&:before{
+					content:'alo';
+					background-color: blue;
+					width: 100%;
+					height: 60px;
+					display: block;
+					display: none;
+
+					box-shadow: -3px 3px 9px #bbb;
+				}
+				padding: 1rem;
+				fieldset{
+					padding: 1rem 0;
+					border: none;
+					div.form-group{
+						margin-bottom: 1rem;
+						label{
+								font-weight: 100;
+								margin-bottom: 0.5rem;
+								font-size: 0.9rem;
+							}
+						&.s-row{
+							width: 49%;
+							display: inline-block;
+						}
+						label{
+							input{
+								display: block;
+								width: 100%;
+								height: 30px;
+								margin-top: 0.25rem;
+							}
+							abbr{
+								display: none;
+
+							}
+							span{
+								font-weight: 100;
+								margin-bottom: 0.5rem;
+								font-size: 12px;
+								font-weight: 500;
+								letter-spacing: 2px;
+								text-transform: uppercase;
+							}
+						}
+						div.controls{
+
+							select#country{
+								margin-top: 0.25rem;
+								width: 100%;
+								height: 30px;
+							}
+						}
+					}
+					.secondary{
+						background-color: #16222a;
+						background-color: #1c4234;
+						border: none;
+						color: white;
+						display: block;
+						margin: 0 auto;
+
+						&::after{
+							border-color: #1c4234;
+						}
+					}
+				}
+			}
+		}
+}
+
+div.container{
+
+	.titulo{
+		text-align: center;
+		margin-bottom: 1rem;
+		color: black;
+		font-size: 1.6rem;
+	}
+
+	section{
+		padding: 1rem;
+	}
+	
+	section.about-us{
+		display: flex;
+			background-color: #4e7e6426;
+			div.half{
+
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				h2{
+					font-size: 1.6rem;
+					padding-right: 1rem;
+					line-height: 1.3;
+					margin-bottom: 1rem;
+					
+				}
+				p{
+					color: #666;
+				}
+
+				&.dos{
+					    padding: 1rem;
+    					display: none;
+				}
+
+				&.uno{
+					    padding: 1rem;
+					ul.good-points{
+						li{
+							padding: 7.5px 1rem;
+							border: 2px solid $main-color;
+							border-radius: 30px;
+							list-style: none;
+							margin-bottom: 1.25rem;
+
+							&:first-of-type{
+								margin-top: 1rem;
+							}
+							img.icon{
+								height: 18px;
+								display: inline;
+								margin-right: 1rem;
+							}
+							p{
+								display: inline;
+								font-weight: 200;
+								color: black;
+							}
+						}
+					}
+				}
+			}
+
+		div.half{
+
+
+			&.uno{
+				margin-bottom: 1rem;
+			}
+			&.dos{
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	section.our-models{
+		width: 100%;
+
+		margin: 3rem auto;
+
+		
+
+		div.models{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 1rem;
+			flex-wrap: wrap;
+		}
+
+
+		div.model{
+
+			
+			border-radius: 7px;
+			padding: .5rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 90%;
+			max-width: 500px;
+			min-width: 200px;
+
+			div.model-picture{
+				
+				
+				position: relative;
+				padding-top: 60%;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100%;
+				background-image: url(../img/bike2.jpg);
+				height: 100%;
+				width: 100%;
+
+			}
+
+			p.model-description{
+				margin: 0.5rem 0;
+				font-weight: 300;
+				font-size: 1.0rem;
+			}
+
+			.model-name{
+				text-align: center;
+				color: black;
+				
+			}
+
+			button.model-buy{
+				text-align: center;
+				padding: .5rem;
+				box-shadow: none;
+				border: none;
+				background-color: $main-color;
+				border: 1px solid $main-color;
+				color: $main-color;
+				border-radius: 5px;
+				font-family: sans-serif;
+				color:white;
+			}
+
+			p.model-description{
+				text-align: center;
+			}
+			
+
+			img.model-image{
+				width: 100%;
+				padding: 0 0.5rem;
+			}
+			
+			div.price{
+				position: absolute;
+				top: 1rem;
+				left: 1rem;
+				background: $main-color;
+				padding: 0.15rem;
+				font-weight: 800;
+				color: white;
+				border-radius: 5%;
+			}
+		}
+	}
+
+	section.materials{
+
+		margin: 3rem auto;
+		padding: 2rem 1rem;
+
+		h2.titulo{
+			
+		}
+		div.avd{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+
+
+			div.check-marker{
+				text-align: center;
+				max-width: 250px;
+				min-width: 200px;
+				margin-bottom:1rem;
+				border: 2px solid $main-color;
+				border-radius: 10px;
+				padding: 1rem;
+				h3{
+					font-size: 1.25em;
+					margin-bottom: 0.25rem;
+					margin-top: 0.25rem;
+					text-transform: uppercase;
+				}
+
+				p{
+					color: rgb(128, 128, 128);
+					font-weight: 200;
+				}
+				img{
+					width: 80%;
+				}
+
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	section.testimonial{
+		background-color: #4e7e6426;
+		h2.titulo{
+			span.ts{
+				color: $main-color;
+			}
+		}
+		div.testimonial-content{
+
+			div.text{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			
+
+
+			img.testimonial-img{
+				max-width: 100%;
+				margin: 0 auto;
+				margin-bottom: 1rem;
+			}
+	
+			p.test{
+				line-height: 1.6;
+				font-size: 1.4rem;
+			}
+	
+			p.test::before, p.test::after{
+				content: '"';
+				position: relative;
+				font-size: 1.7rem;
+				line-height: 1;
+				font-family: serif;
+			}
+		}
+	}
+
+	
+}
+
+footer{
+	background-color: #161616;
+	
+	div.container{
+		text-decoration: none;
+	text-align: right;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5rem 3rem 4rem;
+	justify-content: space-between;
+	z-index: 10;
+
+		&::before{
+			content: 'B-TRACK';
+			position: absolute;
+			top: 0%;
+			transform: translateY(-50%);
+			left: 0;
+			font-size: clamp(2.5rem, -0.875rem + 8.333vw, 6.5rem);
+			letter-spacing: 5px;
+			color: white;
+			
+		}
+	}
+	&::before{
+		content: '';
+		background-image: url(../img/family-canyon-endurace-04.jpg);
+		width: 100%;
+		height: 120px;
+		z-index: 10;
+		display: block;
+		filter: grayscale(1);
+		background-position: center;
+		background-size: cover;
+	}
+	div.link-section{
+
+		display: inline-block;
+		width: 50%;
+		margin-bottom: 1rem;
+
+		p.links-text{
+			font-family: sans-serif;
+			font-size: 14px;
+			font-weight: 600;
+			color: #e6e6e6;
+			margin-bottom: 1.25rem;
+		}
+
+		ul{
+
+			li{
+				list-style: none;
+				margin-bottom: 1rem;
+				
+			}
+		}
+		&.socials{
+			ul{
+				li{
+					display: inline-block;
+					a{
+						text-decoration: none;
+						margin-right: 0.25rem;
+						img{
+							width: 19px;
+						}
+					}
+				}
+			}
+		}
+
+		
+	}
+
+	a, .copy-text{
+		text-decoration: none;
+		color: #a7a7a7;
+		font-size: 14px;
+		&:hover{
+			color: #ddd;
+			transition: .3s ease;
+		}
+	}
+
+	.copy-section{
+		text-align: center;
+		width: 100%;
+	}
+	
+}
+
+@media (max-width:600px){
+	div.container{
+		footer{
+			div.link-section{
+				width: 100%;
+				text-align: left;
+			}
+
+		}
+	}
+}
+
+
+
+
+/* index 2 */
+.middle{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.card{
+	cursor: pointer;
+	width: 340px;
+	height: 340px;
+
+}
+
+.front,.back{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.anim{
+	
+	transition: transform .6s linear;
+}
+
+.front img{
+	height: 100%;
+}
+
+.front{
+	transform: perspective(600px) rotateY(0deg);
+}
+
+.back{
+	background-color: #f1f1f1;
+	transform: perspective(200px) rotateY(180deg);
+}
+
+.card:hover > .front{
+	transform: perspective(200px) rotateY(-180deg);
+}
+
+.card:hover > .back{
+	transform: perspective(600px) rotateY(0deg);
+}
+
+@media only screen and (max-width: 699px), (orientation: portrait){
+	main.landing{
+		min-height: calc(100vh - 55px);
+
+		div.landing-inside div.landing-pic{
+			position: initial;
+			justify-content: center;
+			display: flex;
+
+			img{
+				position: initial;
+				transform: initial;
+			}
+		}
+	}
+
+}
+
+@media only screen and (min-width:820px), (orientation:landscape){
+
+	main.landing{
+		height: auto;
+		
+	}
+
+	.hide{
+		display: block;
+	}
+
+	main.landing div.landing-inside{
+		flex-direction: row;
+
+		div.half{
+			width: 50%;
+
+			&.cta{
+				display: flex;
+				flex-direction: column;
+
+				h2{
+					
+					text-align: center;
+
+					&.cta-text{
+						margin: 0 0.5rem 1rem;
+						margin-bottom: 1rem;
+					}
+				}
+
+				button.button-cta{
+					cursor:pointer;
+					margin-bottom: 1rem;
+				}
+			}
+		}
+	}
+
+	div.container{
+
+		section.about-us{
+			display: flex;
+			background-color: #4e7e6426;
+			div.half{
+				width: 50%;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				h2{
+					font-size: 1.6rem;
+					padding-right: 1rem;
+					line-height: 1.3;
+					margin-bottom: 1rem;
+					
+				}
+				p{
+					color: #666;
+				}
+
+
+				&.uno{
+					    padding: 1rem;
+					ul.good-points{
+						li{
+							padding: 7.5px 1rem;
+							border: 2px solid $main-color;
+							border-radius: 30px;
+							list-style: none;
+							margin-bottom: 1.25rem;
+
+							&:first-of-type{
+								margin-top: 1rem;
+							}
+							img.icon{
+								height: 18px;
+								display: inline;
+							}
+							p{
+								display: inline;
+								font-weight: 200;
+								color: black;
+							}
+						}
+					}
+				}
+				&.dos{
+					display: flex;
+				}
+			}
+		}
+
+
+		section.our-models{
+			width: 100%;
+	
+			div.models{
+				flex-direction: row;
+				justify-content: center;
+				
+
+				div.model{
+					width: 45%;
+					max-width: 500px;
+
+					div.model-picture{
+						
+					}
+				}
+
+			}
+		}
+
+		section.materials{
+
+			div.avd{
+				flex-direction: row;
+				align-items: flex-start;
+				flex-wrap: wrap;
+
+				div.check-marker{
+					margin-bottom: 0;
+					max-width: 25%;
+					
+					img.check{
+						max-width: 200px;
+					}
+				}
+			}
+
+		}
+
+		section.testimonial{
+			
+			.testimonial-content{
+				display:flex;
+				padding: 0 1rem;
+
+				.testimonial-img, .text{
+					width: 50%;
+				}
+
+				.text{
+					margin-left: 1rem
+				}
+			}
+		}
+
+		footer{
+			div.link-section{
+				width: 25%;
+			}
+		}
+	}
+
+	
+}
+
+
+@media only screen and (min-width:1040px){
+	div.container{
+		section.our-models{
+			
+	
+			div.models{
+				
+
+				div.model{
+					width: 30%;
+					max-width: 500px;
+
+					div.model-picture{
+						
+					}
+				}
+
+			}
+		}
+	}
+}
+
+.product-show{
+	background-image: url(../img/sysbike.jpg);
+	background-size: cover;
+	// min-height: 59.03vw;
+	height: 100vh;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 4rem;
+}
+
+@media (max-width:700px) {
+	.product-show{
+		background-position: center;
+		height: 100vh;
+		min-height: 100vh;
+		max-height: 100vh;
+		font-size: 2.5rem;
+	}
+}
+
+.hidden{
+	opacity: 0;
+	transition: 1s ease;
+	filter: blur(5px);
+	transform: translateY(50%);
+}
+
+.show{
+	opacity: 1;
+	filter: blur(0);
+	transform: translateY(0%);
+}
+
+.extra-text{
+	transition-delay: 200ms;
+}
+
+
+.carrousel-area{
+	padding: 100px 0;
+	overflow: hidden;
+	background-color: black;
+}
+.horizontal__content{
+	display: flex;
+}
+
+.horizontal__item{
+	padding: 200px 150px;
+}
+.horizontal__item:not(:last-child){
+	margin-right: 50px;
+}
+.horizontal__item:first-of-type{
+	margin-left: 30px;
+}
+@media(min-width:960px){
+	.horizontal__item:not(:last-child){
+		margin-right: 150px;
+	}
+	.horizontal__item:first-of-type{
+		margin-left: 140px;
+	}
+}
+.horizontal__num{
+	font-size: 80px;
+	font-weight: 900;
+	font-stretch: condensed;
+}
+.horizontal__item{
+	background-size: cover;
+	background-position: center;
+}
+.horizontal__item:nth-of-type(1){
+	background-image: url(../img/man-biking.jpg);
+}
+.horizontal__item:nth-of-type(2){
+	background-image: url(../img/SystemSix23QA32.jpg);
+}
+.horizontal__item:nth-of-type(3){
+	background-image: url(../img/SystemSix-Rejig_03.jpg);
+	background-position: left;
+}
+.horizontal__item:nth-of-type(4){
+	background-image: url(../img/sysbike.jpg);
+	background-position: center;
+}

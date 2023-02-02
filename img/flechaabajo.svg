@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="flecha_abajo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 245.7 265.4" style="enable-background:new 0 0 245.7 265.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+	.st1{font-family:'Aliquam';}
+	.st2{font-size:119.1098px;}
+	.st3{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<polygon id="linea_x5F_externa" class="st0" points="191.8,146 191.8,2 124.8,2 120.8,2 50.8,2 50.8,146 4.8,146 122.8,264 
+	240.8,146 "/>
+<text id="dollar_x5F_sign" transform="matrix(1 0 0 1 85.9305 149.3527)" class="st1 st2">$</text>
+<polyline id="linea_x5F_interna" class="st3" points="180.8,14 63.8,14 63.8,156 31.8,156 120.8,243 208.8,157 173.8,157 173.8,74 
+	"/>
+</svg>
