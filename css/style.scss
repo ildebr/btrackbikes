@@ -1225,3 +1225,75 @@ footer{
 	background-image: url(../img/sysbike.jpg);
 	background-position: center;
 }
+
+.plus-sign{
+	width: 20px;
+}
+
+.faq__container{
+	background-color: black;
+	color: #f0eded;
+	
+	.content{
+		max-width: 1090px;
+		margin: 0 auto;
+	}
+
+	.faq{
+		max-width: 700px;
+		margin: 0 auto;
+		padding: 1rem;
+	}
+
+	// .faq__element{
+	// 	height: 100%;
+	// 	max-height: calc(1.3rem + 2rem + 1px);
+	// 	overflow: hidden;
+	// 	cursor: pointer;
+	// 	transition: max-height .5s ease-in-out;
+	// 	padding-bottom: 2rem;
+
+	// 	&.active{
+	// 		max-height: 800px;
+			
+	// 	}
+	// }
+
+	.faq__element{
+		overflow: hidden;
+		cursor: pointer;
+		transition: max-height .5s ease-in-out;
+	}
+
+	.faq__element_header{
+		
+		display: grid;
+		border-top: 1px solid rgb(115, 115, 115);
+		grid-template-columns: 60px auto;
+		padding: 1rem 0;
+		padding-top: 1rem;
+		h3{
+			font-size: 1.3rem;
+		}
+	}
+	.faq__element_content{
+		padding-left: 60px;
+		font-weight: 300;
+		overflow: hidden;
+		
+		max-height: 0;
+		
+		transition: max-height .5s ease-in-out;
+	}
+	.faq__element.active .faq__element_content{
+		max-height: 1000px;
+	}
+	.faq__element_content_hero{
+		padding-bottom: 1rem;
+	}
+
+	iframe{
+		margin-top: 1rem;
+		width: 100%;
+	}
+}

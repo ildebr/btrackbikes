@@ -983,4 +983,54 @@ footer .copy-section {
   background-position: center;
 }
 
+.plus-sign {
+  width: 20px;
+}
+
+.faq__container {
+  background-color: black;
+  color: #f0eded;
+}
+.faq__container .content {
+  max-width: 1090px;
+  margin: 0 auto;
+}
+.faq__container .faq {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.faq__container .faq__element {
+  overflow: hidden;
+  cursor: pointer;
+  transition: max-height 0.5s ease-in-out;
+}
+.faq__container .faq__element_header {
+  display: grid;
+  border-top: 1px solid rgb(115, 115, 115);
+  grid-template-columns: 60px auto;
+  padding: 1rem 0;
+  padding-top: 1rem;
+}
+.faq__container .faq__element_header h3 {
+  font-size: 1.3rem;
+}
+.faq__container .faq__element_content {
+  padding-left: 60px;
+  font-weight: 300;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+}
+.faq__container .faq__element.active .faq__element_content {
+  max-height: 1000px;
+}
+.faq__container .faq__element_content_hero {
+  padding-bottom: 1rem;
+}
+.faq__container iframe {
+  margin-top: 1rem;
+  width: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -112,3 +112,19 @@ var typed3 = new Typed('.main-title', {
         end: "+=" + carsec.offsetWidth
     }
   })
+
+  faqe = document.querySelectorAll(".faq__element_header")
+
+  faqe.forEach((faq) =>{
+    faq.addEventListener(("click"), (e) =>{
+        e.stopPropagation()
+        console.log(e.currentTarget.children)
+        if(!e.currentTarget.parentElement.classList.contains("active")){
+            e.currentTarget.parentElement.classList.add("active")
+        }else{
+            e.currentTarget.parentElement.classList.remove("active")
+        }
+        
+    }, true)
+  })
+
