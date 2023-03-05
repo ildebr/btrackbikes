@@ -1034,10 +1034,20 @@ footer .copy-section {
 }
 
 .map-section {
+  text-align: center;
   background-color: black;
-  padding: 1rem;
+  padding: 4rem 1rem 4rem;
+  color: white;
 }
-.map-section svg {
+.map-section p {
+  font-weight: 300;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.map-section h2 {
+  font-size: 2.5rem;
+}
+.map-section #svgmap {
   position: absolute;
   left: 29%;
   top: 12%;
@@ -1058,6 +1068,40 @@ footer .copy-section {
   border-radius: 20px;
   top: 0;
   z-index: 1;
+}
+.map-section .map-container {
+  margin: 0 auto;
+}
+.map-section .badge {
+  width: 150px;
+}
+.map-section .download-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.map-section .strava-logo {
+  height: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.download-buttons {
+  margin: 3rem 0rem;
+}
+
+@media (min-width: 700px) {
+  .map-section {
+    text-align: left;
+  }
+  .map-section .container-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1090px;
+    margin: 0 auto;
+  }
+  .map-section .map-container {
+    max-width: 400px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
