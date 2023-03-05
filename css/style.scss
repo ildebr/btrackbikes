@@ -1297,3 +1297,34 @@ footer{
 		width: 100%;
 	}
 }
+
+.map-section{
+
+	background-color: black;
+	padding: 1rem;
+	svg{
+		position: absolute;
+		left: 29%;
+		top: 12%;
+		height: 79%;
+	}
+
+	.container{
+		width: fit-content;
+		max-width: 3000px;
+	}
+
+	img{
+		width: 100%;
+	}
+
+	.circle{
+		position: absolute;
+		background: red;
+		height: 40px;
+		width: 40px;
+		border-radius: 20px;
+		top: 0;
+		z-index: 1;
+	}
+}

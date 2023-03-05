@@ -128,3 +128,42 @@ var typed3 = new Typed('.main-title', {
     }, true)
   })
 
+
+
+  function initMotionPath() {
+    gsap.registerPlugin(MotionPathPlugin);
+    // declare a null tween variable
+    let tween;
+  
+    function createTween() {
+      // save progress before we kill tween if it exists.
+      let progress = tween ? tween.progress() : 0;
+      // kill any pre-existing tween.
+      tween && tween.progress(0).kill();
+  
+      // create the tween
+      tween = gsap.to(".circle", {
+        motionPath: {
+          path: "#path",
+          align: "#path",
+          alignOrigin: [0.5, 0.5],
+          autoRotate: true
+        },
+        duration: 8,
+        repeat: -1,
+        repeatDelay: 1,
+        ease: "none"
+      });
+  
+      // update tween's progress
+      tween.progress(progress);
+    }
+    createTween();
+  
+    // listen for window resize to recalculate tween.
+    window.addEventListener("resize", createTween);
+  }
+  
+  // run once DOM and scripts are all loaded.
+  document.addEventListener("DOMContentLoaded", initMotionPath);
+  
