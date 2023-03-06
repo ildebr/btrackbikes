@@ -131,7 +131,7 @@ var typed3 = new Typed('.main-title', {
 
 
   function initMotionPath() {
-    gsap.registerPlugin(MotionPathPlugin);
+    gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
     // declare a null tween variable
     let tween;
   
@@ -142,6 +142,19 @@ var typed3 = new Typed('.main-title', {
       tween && tween.progress(0).kill();
   
       // create the tween
+    //   tween = gsap.to(".circle", {
+    //     motionPath: {
+    //       path: "#path",
+    //       align: "#path",
+    //       alignOrigin: [0.5, 0.5],
+    //       autoRotate: true
+    //     },
+    //     duration: 8,
+    //     repeat: -1,
+    //     repeatDelay: 1,
+    //     ease: "none"
+    //   });
+
       tween = gsap.to(".circle", {
         motionPath: {
           path: "#path",
@@ -149,10 +162,14 @@ var typed3 = new Typed('.main-title', {
           alignOrigin: [0.5, 0.5],
           autoRotate: true
         },
-        duration: 8,
-        repeat: -1,
-        repeatDelay: 1,
-        ease: "none"
+        scrollTrigger:{
+            trigger: ".map-section",
+            start: "80% 90%",
+            end: "bottom 60%",
+            scrub: true,
+            
+        }
+
       });
   
       // update tween's progress

@@ -1301,7 +1301,7 @@ footer{
 .map-section{
 	text-align: center;
 	background-color: black;
-	padding: 4rem 1rem 4rem;
+	padding: 8rem 1rem 4rem;
 	color: white;
 	p{
 		font-weight: 300;
@@ -1376,7 +1376,8 @@ footer{
 
 
 		.map-container{
-			max-width: 400px;
+			max-width: 550px;
+			margin-right: -1rem;
 		}
 		
 	}
