@@ -1062,9 +1062,9 @@ footer .copy-section {
 }
 .map-section .circle {
   position: absolute;
-  background: red;
-  height: 40px;
-  width: 40px;
+  background: black;
+  height: 25px;
+  width: 25px;
   border-radius: 20px;
   top: 0;
   z-index: 1;
@@ -1102,6 +1102,96 @@ footer .copy-section {
   .map-section .map-container {
     max-width: 550px;
     margin-right: -1rem;
+  }
+}
+.newsletter__container {
+  background-color: black;
+  padding: 4rem 0;
+}
+.newsletter__container .newsletter {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: white;
+}
+.newsletter__container .newsletter__image img {
+  display: none;
+  max-width: 400px;
+}
+.newsletter__container .newsletter__subscription form h3 {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.newsletter__container .newsletter__subscription form p {
+  color: #ddd;
+  font-weight: 400;
+}
+.newsletter__container .newsletter__subscription form .form-control {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  margin-top: 1rem;
+}
+.newsletter__container .newsletter__subscription form .form-control input, .newsletter__container .newsletter__subscription form .form-control button {
+  padding: 0.7rem 0.75rem;
+  font-size: 1rem;
+}
+.newsletter__container .newsletter__subscription form .form-control input {
+  background: #161616;
+  border: moccasin;
+  color: white;
+  cursor: pointer;
+}
+.newsletter__container .newsletter__subscription form .form-control button {
+  background: #192831;
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+.newsletter__container .newsletter .success {
+  font-size: 1.3rem;
+}
+
+@media (min-width: 900px) {
+  .newsletter__container .newsletter {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    max-width: 1090px;
+    padding: 1rem;
+  }
+  .newsletter__container .newsletter__image {
+    grid-column: 1/5;
+    padding: 1.5rem 0;
+    z-index: 2;
+  }
+  .newsletter__container .newsletter__image img {
+    display: inline-block;
+    max-width: 600px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+  .newsletter__container .newsletter__subscription {
+    grid-column: 6/-1;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding-right: 3rem;
+  }
+  .newsletter__container .newsletter__subscription form .form-control input {
+    background: #292929;
+  }
+  .newsletter__container .newsletter::after {
+    content: "";
+    background-color: #161616;
+    height: 100%;
+    width: 100%;
+    grid-column: 4/-1;
+    z-index: 1;
+  }
+  .newsletter__container .newsletter__image, .newsletter__container .newsletter__subscription, .newsletter__container .newsletter::after {
+    grid-row: 1;
   }
 }
 

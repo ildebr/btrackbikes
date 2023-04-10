@@ -76,10 +76,10 @@ const scroll_3 = ScrollTrigger.create({
 requestAnimationFrame(raf);
 gsap.registerPlugin(ScrollTrigger)
 gsap.to('.product-show', {
-    yPercent: 100,
+    yPercent:100,
     ease: 'none',
     scrollTrigger: {
-        trigger: '.lst',
+        trigger: '.map-section',
         start: 'top bottom',
         end: 'top top',
         scrub: true,
@@ -184,3 +184,22 @@ var typed3 = new Typed('.main-title', {
   // run once DOM and scripts are all loaded.
   document.addEventListener("DOMContentLoaded", initMotionPath);
   
+
+
+
+var nl = document.querySelector('#newsletter__form')
+var fc = document.querySelector('.form-control')
+
+  nl.addEventListener('submit',(e) => {
+    e.preventDefault()
+
+    
+    fc.innerHTML = "<img src='img/three-dots.svg' alt=''>"
+
+    setTimeout(()=>{
+        fc.innerHTML = "<div class='success'> Thanks for subscribing! </div>"
+    },2000)
+
+
+
+  })
