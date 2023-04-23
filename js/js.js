@@ -32,6 +32,20 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el))
 
+const landing = document.getElementById(".landing-bike");
+const img_header = document.querySelector(".bike-bg")
+const imgheadertime = gsap.timeline({paused: true})
+imgheadertime.fromTo(img_header,{backgroundPositionY: 0}, {backgroundPositionY: '-80px', duration:1, ease:'SlowMo'},0);
+
+const imgScroll = ScrollTrigger.create({
+  animation: imgheadertime,
+  trigger: img_header,
+  start: 'top top',
+  end: 'bottom end',
+  // markers: true,
+  scrub: true
+})
+console.log(imgScroll)
 
 const section_1 = document.getElementById("bike-presentation-section");
 const x1 = document.querySelector(".plus1");
